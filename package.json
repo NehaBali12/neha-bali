@@ -1,0 +1,28 @@
+{
+  "name": "goodbudget-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "clean:allure-results": "rimraf allure-results",
+    "clean:allure-report": "rimraf allure-report",
+    "clean:allure": "npm run clean:allure-results && npm run clean:allure-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report-$(date +'%Y-%m-%d_%H-%M-%S')",
+    "allure:open-latest": "allure open $(ls -td allure-report-* | head -1)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "allure-commandline": "^2.34.0",
+    "allure-playwright": "^3.3.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
