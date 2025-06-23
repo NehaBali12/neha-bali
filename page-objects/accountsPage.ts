@@ -5,12 +5,26 @@ export class AccountsPage {
   readonly accountsLink: Locator;
   readonly addEditLink: Locator;
   readonly currentBalance: Locator;
+  readonly amount: Locator;
+  readonly header: Locator;
+  readonly addButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.accountsLink = page.getByRole("link", { name: "accounts " });
     this.addEditLink = page.getByRole("link", { name: "Add / Edit" });
-    this.currentBalance = page.getByLabel("Current Balance").locator("input");
+    this.currentBalance = page
+      .locator('div[class="row-name account-name"]')
+      .locator(
+        'input[class="amount pull-right ng-untouched ng-pristine ng-valid"]'
+      );
+    this.amount = page.locator(
+      'input[class="bank-controls-input ng-pristine ng-valid ng-touched"]'
+    );
+    this.header = page.getByRole("heading", {
+      name: "Checking, Savings, Or Cash",
+    });
+    this.addButton = page.locator('button[class="btn btn-add"]');
   }
 
   /**
@@ -19,8 +33,5 @@ export class AccountsPage {
   async clickOnAccountsLink() {
     await this.accountsLink.click();
     await this.addEditLink.click();
-    await this.currentBalance.click();
-    await this.currentBalance.clear();
-    await this.currentBalance.fill("4000");
   }
 }

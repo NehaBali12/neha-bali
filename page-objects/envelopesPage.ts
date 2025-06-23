@@ -12,6 +12,7 @@ export class EnvelopesPage {
   readonly periodList: Locator;
   readonly saveChangesButton: Locator;
   readonly saveChangesDialogBox: Locator;
+  readonly newEnvelopesCreatedMessage: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -24,9 +25,14 @@ export class EnvelopesPage {
       .locator("div.row-name")
       .locator('input[type="text"]');
     this.monthlyDropdown = page.locator("text=Monthly (Primary)");
+    this.newEnvelopesCreatedMessage = page.getByRole("heading", {
+      name: "New Envelopes Created!",
+    });
     this.periodList = page.locator("#period-extra-MON");
     this.saveChangesButton = page.getByRole("button", { name: "Save Changes" });
-    this.saveChangesDialogBox = page.getByRole("button", { name: "No thanks" });
+    this.saveChangesDialogBox = page.locator(
+      'button[id="fillEnvelopesModalNo"]'
+    );
   }
 
   /**
@@ -45,7 +51,9 @@ export class EnvelopesPage {
     }
     await this.page.mouse.click(0, 0);
     await this.saveChangesButton.click();
-    await this.saveChangesDialogBox.click();
+    if (await this.saveChangesDialogBox.isVisible({ timeout: 3000 })) {
+      await this.saveChangesDialogBox.click();
+    }
   }
 
   /**
@@ -53,7 +61,7 @@ export class EnvelopesPage {
    */
   async deleteAllEnvelopes() {
     await this.addEditLink.click();
-    await this.monthlyDropdown.waitFor();
+    await this.monthlyDropdown.waitFor({ state: "visible" });
     const deleteButtons = this.deleteEnvelopes;
     while ((await deleteButtons.count()) > 0) {
       await deleteButtons.nth(0).click();

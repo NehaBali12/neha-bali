@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
+    "test": "npx playwright test --reporter=html",
     "clean:allure-results": "rimraf allure-results",
     "clean:allure-report": "rimraf allure-report",
     "clean:allure": "npm run clean:allure-results && npm run clean:allure-report",

@@ -14,4 +14,6 @@ export const testData = {
     { name: "Utility", amount: "200" },
     { name: "miscellaneous", amount: "200" },
   ],
+
+  transactionDetails: [{ payee: "Adams", amount: "150" }],
 };

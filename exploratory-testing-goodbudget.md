@@ -4,13 +4,13 @@
 
 ### 1. Exploratory testing charters
 
-| TestCase ID | TestCase Description                                        | Priority |
-| :---------- | :---------------------------------------------------------- | :------- |
-| 1           | Authentication login/logout                                 | Medium   |
-| 2           | Account addition (Bank Accounts/Credit Cards)               | Medium   |
-| 3           | Envelope creation, editing, and deletion                    | High     |
-| 4           | Transaction creation, editing and deletion                  | High     |
-| 5           | Dashboard visualizations for the transactions and Reporting | High     |
+| ID  | TestCase Description                                        | Priority |
+| :-- | :---------------------------------------------------------- | :------- |
+| 1   | Authentication login/logout                                 | Medium   |
+| 2   | Account addition (Bank Accounts/Credit Cards)               | Medium   |
+| 3   | Envelope creation, editing, and deletion                    | High     |
+| 4   | Transaction creation, editing and deletion                  | High     |
+| 5   | Dashboard visualizations for the transactions and Reporting | High     |
 
 ---
 
