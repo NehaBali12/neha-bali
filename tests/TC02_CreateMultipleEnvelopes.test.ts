@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
-import { EnvelopesPage } from "../page-objects/envelopesPage";
-import { FillEnvelopesPage } from "../page-objects/fillEnvelopesPage";
-import { LoginPage } from "../page-objects/loginPage";
+import { EnvelopesPage } from "../page-objects/EnvelopesPage";
+import { FillEnvelopesPage } from "../page-objects/FillEnvelopesPage";
+import { LoginPage } from "../page-objects/LoginPage";
 
 test.describe.configure({ mode: "serial" });
 

@@ -1,5 +1,5 @@
 import { chromium } from "@playwright/test";
-import { CleanupTestdataPage } from "../page-objects/cleanupTestdataPage";
+import { CleanupTestdataPage } from "../page-objects/CleanupTestdataPage";
 
 export default async function globalTeardown() {
   const browser = await chromium.launch();

@@ -1,6 +1,6 @@
 import { test } from "@playwright/test";
-import { AddTransactionPage } from "../page-objects/addTransactionPage";
-import { LoginPage } from "../page-objects/loginPage";
+import { AddTransactionPage } from "../page-objects/AddTransactionPage";
+import { LoginPage } from "../page-objects/LoginPage";
 
 test.describe("Login to Goodbudget Application", () => {
   test.beforeEach(async ({ page }) => {
