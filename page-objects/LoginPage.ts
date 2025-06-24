@@ -19,7 +19,7 @@ export class LoginPage {
   }
 
   /**
-   * Logs in to the GoodBudget application using valid credentials.
+   * Log In to the GoodBudget application using valid credentials.
    */
   async login() {
     const url = process.env.URL!;

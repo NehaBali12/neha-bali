@@ -1,19 +1,20 @@
 # neha-bali
 
-# GoodBudget Automation 
+# GoodBudget Automation
 
 Automated tests for the [GoodBudget](https://www.goodbudget.com) web application using **Playwright** and **TypeScript**.
 
 ## Features
 
 -Covered flows for:
-  - Login to the Application
-  - Creating & deleting **Envelopes**
-  - Creating **Accounts**
+
+- Login to the Application
+- Creating & deleting **Envelopes**
+- Creating **Accounts**
 - Structured using **Page Object Model**
 - Configurable via `.env` file
 - Integrated with **Allure Reporting**
-- Test data cleanup handled dynamically 
+- Test data cleanup handled dynamically
 
 ## Project Setup
 
@@ -29,19 +30,30 @@ npm install dotenv
 Create a `.env` in the root directory:
 
 ```env
+
 URL=https://www.goodbudget.com
 EMAIL=your@email.com
 PASSWORD=yourPassword
+
+```
+
+```bash
+npm install dotenv
 ```
 
 Use with: `process.env.BASE_URL` in code
 
-### 3. **Install Allure CLI** (if not already)
+## 3. **Install Allure CLI** (if not already)
 
 ```bash
 npm install -g allure-commandline
 npm i -D allure-playwright allure-commandline
 ```
+
+## 4. Extensions Added \*\*
+
+- Prettier Code formatter
+- Playwright Test for VS Code
 
 ## Running Tests
 
@@ -100,23 +112,24 @@ npm run allure:open-latest
 │   ├── TC01_CreateAccount.test.ts
 │   ├── TC02_CreateMultipleEnvelopes.test.ts
 │   └── TC03_AddTransaction.test.ts
-|   └── global-teardown.ts
+│   └── global-teardown.ts
 
 ├── page-objects/
 │   ├── EnvelopePage.ts
 │   ├── AccountPage.ts
-|   └── AddTransactionPage.ts
-|   └── CleanupTestdataPage.ts
-|   └── FillEnvelopesPage.ts
-|   └── LoginPage.ts
+│   └── AddTransactionPage.ts
+│   └── CleanupTestdataPage.ts
+│   └── FillEnvelopesPage.ts
+│   └── LoginPage.ts
 
 │── data/
-|  ├──testdata.ts
+│   ├──testdata.ts
 ├── .env
 ├── Dockerfile
 ├── docker-compose.yaml
 ├── playwright.config.ts
 └── README.md
+└── exploratory-testing-goodbudget.md
 ```
 
 ## Best Practices
@@ -132,13 +145,14 @@ npm run allure:open-latest
 ```bash
 - docker build -t playwright-tests .
 ```
+
 ## Parallel Test Execution
 
 - Playwright supports parallel execution using multiple worker processes
 - Tests are distributed across workers (parallel threads).
 - Each worker runs in a separate browser context or browser instance.
 - Configuration- `playwright.config.ts` file:
-- 
+
 ```ts
 // playwright.config.ts
 export default defineConfig({
@@ -149,5 +163,6 @@ export default defineConfig({
 ```
 
 ## Future Enhancements
+
 - CI integration (e.g., GitHub Actions, Jenkins)
 - Multi-environment config support

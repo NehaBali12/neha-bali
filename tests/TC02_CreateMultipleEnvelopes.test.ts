@@ -5,7 +5,7 @@ import { LoginPage } from "../page-objects/LoginPage";
 
 test.describe.configure({ mode: "serial" });
 
-test.describe("Login to Goodbudget Application", () => {
+test.describe("Login to Goodbudget App and create envelopes", () => {
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     loginPage.login();
