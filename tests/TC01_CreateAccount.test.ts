@@ -9,7 +9,7 @@ test.describe("Login to Goodbudget App and create account", () => {
     await loginPage.login();
   });
 
-  test("Create accounts", async ({ page }) => {
+  test("Create accounts and debt", async ({ page }) => {
     const accountsPage = new AccountsPage(page);
     await accountsPage.clickOnAccountsLink();
   });

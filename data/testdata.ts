@@ -16,4 +16,11 @@ export const testData = {
   ],
 
   transactionDetails: [{ payee: "Adams", amount: "150" }],
+
+  debtAccountDetails: {
+    name: "House",
+    currentBalance: "14000",
+    monthlyPayment: "230",
+    interestRate: "8",
+  },
 };
