@@ -9,13 +9,13 @@ export const testData = {
   },
 
   envelopes: [
-    { name: "Groceries", amount: "150" },
+    { name: "Groceries", amount: "500" },
     { name: "Rent", amount: "1200" },
     { name: "Utility", amount: "200" },
     { name: "miscellaneous", amount: "200" },
   ],
 
-  transactionDetails: [{ payee: "Adams", amount: "150" }],
+  transactionDetails: { payee: "Adams", amount: "150" },
 
   debtAccountDetails: {
     name: "House",
