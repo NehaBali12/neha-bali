@@ -11,7 +11,7 @@ test.describe("Login to Goodbudget App and create envelopes", () => {
     loginPage.login();
   });
 
-  test("Create envelopes", async ({ page }) => {
+  test.only("Create envelopes", async ({ page }) => {
     const envelopesPage = new EnvelopesPage(page);
     await envelopesPage.addMultipleEnvelops();
   });

@@ -61,9 +61,10 @@ export default defineConfig({
       use: { ...devices["Desktop Safari"] },
     },
   ],
-  webServer: {
-    command: "npm run start",
-    url: "https://goodbudget.com",
-    reuseExistingServer: !process.env.CI,
-  },
+  // webServer: {
+  //   command: "npm run start",
+  //   url: "https://goodbudget.com",
+  //   //reuseExistingServer: !process.env.CI,
+  //   reuseExistingServer: true,
+  // },
 });
