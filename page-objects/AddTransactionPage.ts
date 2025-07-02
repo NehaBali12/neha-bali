@@ -32,7 +32,7 @@ export class AddTransactionPage {
     await this.amount.fill(testData.transactionDetails.amount);
     await this.selectEnvelope.dblclick();
     await this.selectEnvelope.selectOption({
-      index: 2,
+      index: 1,
     });
     const options = await this.selectEnvelope
       .locator("option")

@@ -1,3 +1,5 @@
+import { FillEnvelopesPage } from "../page-objects/FillEnvelopesPage";
+
 export const testData = {
   invalidUser: {
     username: "invalid@example.com",
@@ -23,4 +25,6 @@ export const testData = {
     monthlyPayment: "230",
     interestRate: "8",
   },
+
+  fillEnvelopeDetails: { amount: "2000", payer: "Salary" },
 };

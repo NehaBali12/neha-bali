@@ -18,6 +18,6 @@ test.describe("Login to Goodbudget App and create envelopes", () => {
 
   test("Fill envelopes", async ({ page }) => {
     const fillEnvelopesPage = new FillEnvelopesPage(page);
-    await fillEnvelopesPage.clickOnFillEnvelope();
+    await fillEnvelopesPage.fillEnvelope();
   });
 });

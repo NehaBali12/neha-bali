@@ -54,6 +54,7 @@ export class EnvelopesPage {
     if (await this.saveChangesDialogBox.isVisible({ timeout: 3000 })) {
       await this.saveChangesDialogBox.click();
     }
+    await this.page.waitForLoadState("networkidle");
   }
 
   /**
